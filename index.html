@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]> <html class="ie_old"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+	<title>SRS Wool | Ethical and sustainable non-mulesed Australian Merino Wool</title>
+	<link rel="stylesheet" type="text/css" href="webresources/css/style.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<link rel="shortcut icon" href="webresources/images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="webresources/images/favicon.ico" type="image/x-icon">
+	<script src="webresources/js/jquery.min.js"></script>
+	<script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  		ga('create', 'UA-74390018-1', 'auto');
+ 		 ga('send', 'pageview');
+
+	</script>
+</head>
+<body>
+	<div id="main-wrapper">
+	
+		<div class="empty-height"></div>
+		<div class="content-width home-wrapper">
+			<h1 class="hidden-txt">SRS</h1>
+			<div class="landing-wrapper">
+				<div class="landing">
+					<div class="landing-bg">
+						<img src="webresources/images/logo.png"  title="SRS" />
+						<p>SRS® Wool is a naturally superior, ethical and sustainable fibre, produced from non-mulesed Australian Merino sheep pioneered by <a href="https://www.linkedin.com/in/jim-watts-3b2919115">Dr Jim Watts</a>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="empty-height"></div>
+		<footer>
+			<div class="content-width">
+				<p><a href="mailto:hello@srswool.com.au">hello@srswool.com.au</a></p>
+				<ul class="social-links">
+					<li><a href="https://au.linkedin.com/in/jim-watts-3b2919115" target="_blank" title="linked in" class="linked-icon">linked</a></li>
+					<li><a href="https://twitter.com/hashtag/SRSMerino" target="_blank" title="twitter" class="twitt-icon">twi</a></li>
+					<li><a href="https://www.facebook.com/SRS-Merino-249385081766488" target="_blank" title="facebook" class="fb-icon">fb</a></li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+	<script>
+		$(document).ready(function(){
+			if ($('html').is('.ie_old')) {
+				window.location = 'outdated.html';
+			}
+			
+			setWrapperHeight();
+			
+			myImge = $("<img />").attr("src","webresources/images/logo.png"+ "?" + new Date().getTime());
+		
+			$(myImge).one('load',function() {
+				setWrapperHeight();
+			});
+		});
+		
+		$(window).resize(function() {
+			setWrapperHeight();
+		});
+			
+		function setWrapperHeight() {
+			win_ht		=	jQuery(window).height();
+			cont_ht		=	jQuery('.home-wrapper').height();
+			foot_ht		=	jQuery('footer').height();
+			
+			if(cont_ht > win_ht) {
+				rem_ht = 20;
+				jQuery('#main-wrapper').css('height', (cont_ht)+'px');
+			}
+			else {
+				rem_ht = win_ht - cont_ht;
+				rem_ht = Math.floor((win_ht - cont_ht)/2);
+				jQuery('#main-wrapper').css('height', (win_ht)+'px');
+			}
+			jQuery('.empty-height').css('height', rem_ht+'px');
+		}
+		
+	</script>
+</body>
+</html>
