@@ -121,7 +121,7 @@ footer p a:hover:after{width: 205px;}
     font-size: 16px;
     font-weight: 600;
     line-height: 30px;
-    margin-top: 5px;
+    margin-top: 20px;
     padding-top: 35px;
 	padding-bottom: 60px
 }
@@ -131,6 +131,20 @@ footer p a:hover:after{width: 205px;}
     max-width: 100%;
 }
 .hidden-txt{display: none}
+.srs-live-link{
+	font-size: 0;
+	width: 153px;
+	height: 30px;
+	display: block;
+	position: fixed;
+	right: 0;
+	top: 0;
+	background: url(../images/live-link.jpg) no-repeat left top;
+	transition: opacity 0.3s ease 0s;
+	-webkit-transition: opacity 0.3s ease 0s;
+	-moz-transition: opacity 0.3s ease 0s;
+}
+.srs-live-link:hover{opacity: 0.8}
 
 .browser-support{background: #50824F;}
 .browser-support .content-area{
